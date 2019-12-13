@@ -52,15 +52,18 @@ spei2 <- function(data, scale, kernel=list(type='rectangular',shift=0),
     data.fit <- data
   }
   std <- data*NA
+
   for (s in 1:m) {
     # Cumulative series (acu)
     acu <- data.fit[,s]
     acu.pred <- data[,s]
+    
+    # browser()
     if (scale>1) {
-      wgt <- kern(scale,kernel$type,kernel$shift)
-      acu[scale:length(acu)] <- rowSums(embed(acu,scale)*wgt,na.rm=na.rm)
+      wgt <- kern(scale, kernel$type, kernel$shift)
+      acu[scale:length(acu)] <- rowSums(embed(acu, scale)*wgt, na.rm=na.rm)
       acu[1:(scale-1)] <- NA
-      acu.pred[scale:length(acu.pred)] <- rowSums(embed(acu.pred,scale)*wgt,na.rm=na.rm)
+      acu.pred[scale:length(acu.pred)] <- rowSums(embed(acu.pred,scale)*wgt, na.rm=na.rm)
       acu.pred[1:(scale-1)] <- NA
     }
     

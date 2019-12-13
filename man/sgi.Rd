@@ -4,10 +4,23 @@
 \alias{sgi}
 \title{Groundwater drought index}
 \usage{
-sgi(data, scale, kernel = list(type = "rectangular", shift = 0),
-  distribution = "GNorm", fit = "ub-pwm", na.rm = FALSE,
-  ref.start = NULL, ref.end = NULL, x = FALSE, params = NULL, ...)
+sgi(
+  data,
+  scale,
+  kernel = list(type = "rectangular", shift = 0),
+  distribution = "GNorm",
+  fit = "ub-pwm",
+  na.rm = FALSE,
+  ref.start = NULL,
+  ref.end = NULL,
+  x = FALSE,
+  params = NULL,
+  ...
+)
 }
 \description{
 `sgi`: generalized normal distribution (pelgno) used here.
+}
+\examples{
+man/examples/ex-sgi.R
 }

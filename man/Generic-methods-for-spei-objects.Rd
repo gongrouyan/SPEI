@@ -8,8 +8,6 @@
 \alias{plot.spi}
 \alias{summary.spei}
 \alias{summary.spi}
-\alias{summary.spei}
-\alias{plot.spei}
 \title{Generic methods for \code{spei} objects.}
 \usage{
 \method{print}{spei}(x, ...)
